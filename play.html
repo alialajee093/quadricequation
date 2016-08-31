@@ -1,0 +1,38 @@
+
+<html>
+
+
+<head></head>
+<body>
+<div style="background-color:green;width:300px;height:100px;position:relative;top:-220px;left:120px;">
+<input id='a' name='a' placeholder="enter value of a" /><br />
+<input id='b' name='b' placeholder="enter value of b" /><br />
+<input id='c' name='c' placeholder="enter value of c" /><br />
+<input type='button' onclick="solved()"  value="solve"  /><br />
+</div>
+<hr/>
+<h1 id="result" ></h1>
+
+
+<script  type="text/javascript" src="jquery.js" ></script>
+
+<script>
+function solved(){
+
+
+$.post("http://localhost/solve/index.php",{a:$("#a").val(),b:$("#b").val(),c:$("#c").val()},function(data,z){
+
+data=JSON.parse(data);
+
+
+document.getElementById("result").innerHTML=data.result;
+//$('#result').add(document.cre);
+
+});
+
+}
+</script>
+
+</body>
+</html>
+
