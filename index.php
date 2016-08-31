@@ -17,7 +17,7 @@ echo json_encode(array('result'=>'impossible'));
 $r = sqrt($d);
 
 
-if($d==0) $reset= 'has double root : x='.(-$b/2*$a);
+if($d==0) $result= 'has double root : x='.(-$b/2*$a);
 if($d>0) $result= 'has  2 roots : x1='.(-$b-$r/2*$a).' , x2='.(-$b+$r/2*$a);
 echo json_encode(array('result'=>$result));
 	}
