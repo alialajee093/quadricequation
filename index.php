@@ -18,7 +18,8 @@ $r = sqrt($d);
 
 
 if($d==0) $result= 'has double root : x='.(-$b/2*$a);
-if($d>0) $result= 'has  2 roots : x1='.(-$b-$r/2*$a).' , x2='.(-$b+$r/2*$a);
+if($d>0 & $a!=0) $result= 'has  2 roots : x1='.(-$b-$r/2*$a).' , x2='.(-$b+$r/2*$a);
+else{$result= 'has one root : x='.(-$c/$b);}
 echo json_encode(array('result'=>$result));
 	}
 
